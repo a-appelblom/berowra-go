@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/static/tailwind.css" />
+    <link rel="stylesheet" href="/static/tailwind-dev.css" />
+    <style>
+      html {
+        padding: 1rem;
+        font-family: Roboto Mono, Menlo, monospace;
+        min-height: 100vh;
+        position: relative;
+      }
+    </style>
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
+    <title>Berowra</title>
+    <link rel="stylesheet" href="/static/easymde.min.css" />
+    <script src="/static/easymde.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="font-bold flex items-center">
+            <span
+              class="bg-blue-600 rounded-full h-4 w-4 inline-flex items-center justify-center mr-2"
+            >
+            </span>
+            <a style="transform: translateY(0.6px)" href="/">Berowra</a>
+          </div>
+          <div class="flex items-center justify-end">
+            <span style="transform: translateY(0.6px)">
+              <a href="/" class="mr-3 hover:underline">Content</a>
+              <a href="/files" class="mr-3 hover:underline">Files</a>
+              <a href="/api" class="hover:underline">API</a>
+            </span>
+          </div>
+        </div>
+      </nav>
+    </header>
+    {{ block "content" .}}{{end}}
+    <footer>
+      <div class="text-sm text-gray-500 absolute bottom-0 py-4 hidden">
+        Powered by Berowra. Built by
+        <a href="https://github.com/sampoder" class="hover:underline"
+          >@sampoder</a
+        >
+        and open sourced
+        <a href="https://github.com/sampoder/berowra" class="hover:underline"
+          >here</a
+        >.
+      </div>
+    </footer>
+    <script src="/static/instantclick.js" data-no-instant></script>
+    <script data-no-instant>
+      InstantClick.init();
+    </script>
+  </body>
+</html>
